@@ -1,0 +1,220 @@
+/* Portfolio Hero Section */
+.portfolio-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('../images/portfolio-hero-bg.jpg') no-repeat center center/cover;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.portfolio-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-hero .hero-description {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Projects Section */
+.portfolio-projects {
+    background-color: var(--light-text);
+}
+
+/* Projects Section */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Default (right-aligned) - image on right */
+.project-item.right-aligned {
+    flex-direction: row;
+}
+
+/* Left-aligned - image on left */
+.project-item.left-aligned {
+    flex-direction: row-reverse;
+}
+
+/* Responsive - stack on mobile */
+@media (max-width: 992px) {
+    .project-item,
+    .project-item.right-aligned,
+    .project-item.left-aligned {
+        flex-direction: column;
+    }
+}
+.project-image {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+
+.btn-outline {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* CTA Section */
+.portfolio-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--light-text);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-cta p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .project-item,
+    .project-item.right-aligned,
+    .project-item.left-aligned {
+        flex-direction: column;
+    }
+
+    .project-image, .project-content {
+        width: 100%;
+    }
+}
+@media (max-width: 1200px) {
+    .project-item {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .portfolio-hero h1 {
+        font-size: 3rem;
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-item.reverse {
+        flex-direction: column;
+    }
+
+    .project-image, .project-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-hero {
+        height: 60vh;
+        min-height: 500px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .portfolio-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 10px;
+    }
+}
